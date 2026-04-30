@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TW Air Quality Mini</title>
+  <style>
+    body {
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 0 24px;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.25em; }
+    h1 span { color: #555; font-weight: normal; font-size: 1.1rem; }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 680px;
+      margin: 32px auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <h1>TW Air Quality Mini <span>— 2025</span></h1>
+
+  <p>
+    This project ingests hourly PM2.5 readings from Taiwan EPA monitoring stations,
+    applies light cleaning to handle missing values and unit normalisation, and
+    produces comparison charts across stations. The analysis is driven by a
+    single Jupyter notebook backed by reusable helper functions in <code>src/</code>.
+  </p>
+
+  <img src="pm25_demo.png" alt="PM2.5 station comparison chart">
+
+  <p>
+    <a href="https://github.com/SuperCandy611/tw-airquality-mini/blob/main/notebooks/01_explore.ipynb">
+      View the notebook on GitHub →
+    </a>
+  </p>
+</body>
+</html>
