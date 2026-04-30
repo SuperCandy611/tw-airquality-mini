@@ -1,23 +1,27 @@
 # TW Air Quality Mini
 
-A focused data analysis project for exploring and cleaning air quality data.
-Raw CSV files are kept in `data/raw/` (read-only originals), cleaned outputs go to
-`data/processed/`, exploratory notebooks live in `notebooks/`, and generated
-reports (HTML/PDF) are written to `reports/`. Source helpers in `src/` provide
-reusable `load_csv` and `clean` functions used across notebooks and scripts.
+Exploratory analysis of Taiwan EPA air quality monitoring station data (2025).
 
-## How to run
+## Quick start
 
 ```bash
-# 1. Create and activate the virtual environment
-python -m venv .venv
-source .venv/Scripts/activate   # Windows: .venv\Scripts\activate
-
-# 2. Install dependencies
+git clone https://github.com/SuperCandy611/tw-airquality-mini.git
+cd tw-airquality-mini
+python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-
-# 3. Launch JupyterLab
-jupyter lab
-
-# 4. Open notebooks/01_explore.ipynb and run all cells
+jupyter notebook notebooks/01_explore.ipynb
 ```
+
+## Project structure
+
+```
+data/raw/       原始 CSV（不入 git）
+notebooks/      探索性分析
+src/            共用函數
+reports/        產生的圖表與 HTML
+```
+
+## Notes
+
+Raw CSVs in `data/raw/` are excluded from version control (`.gitignore`).
+Download station CSV files from the [Taiwan EPA AQI open data portal](https://data.epa.gov.tw/en/dataset/aqx_p_02) and place them there before running the notebooks.
